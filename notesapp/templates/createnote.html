@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block b1 %}
+{% if not form.instance.pk %}
+{% load static%}
+<h1>Add Details For Your Note!!</h1>
+{% else %}
+Edit Note
+{% endif %}
+<form  method="post" class="login-form">
+{%csrf_token%}
+{{form.as_p}}
+<input type="submit" class="btn" id="login-submit" value="Save">
+
+
+</form>
+{% endblock %}

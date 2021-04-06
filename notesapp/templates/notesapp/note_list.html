@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block b1 %}
+{%load static%}
+<ol>
+  {% for note in note_list %}
+    <li><a href="{{note.id}}" class="badge badge-secondary">{{note.title}}</a></li>
+    {% empty %}
+    <h1>No Notes Added Yet!!</p>
+    {% endfor %}
+</ol>
+
+<a href="{% url 'app:create' %}"><img src="{% static 'download.jpg' %}" height=70 /></a>
+{% endblock %}
