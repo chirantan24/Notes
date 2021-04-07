@@ -25,7 +25,7 @@ SECRET_KEY = 'r7tttfn1u#vwhk1n1fmn(%(is*j)1_xso97_qm_vkun&qw4je6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rio.pythonanywhere.com']
 
 
 # Application definition

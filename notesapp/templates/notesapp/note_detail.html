@@ -2,11 +2,11 @@
 {% block b1 %}
 {%load static%}
 
-<h1 class="text-center">Title : {{ object.title}} </h1>
-<p id="i1" class="text-lg-left font-weight-bold">Time Created : {{object.time_created}}</p>
+<h1 class="text-center text-uppercase">Title : {{ object.title}} </h1>
+<p id="i1" class="font-weight-bold">Time Created : {{object.time_created}}</p>
 
 <p id="content">{{ object.text }}<br><br><br></p>
-<a href="edit/{{object.id}}"><img src="{% static 'download.jpg' %}" height=80/></a>
-<a href="{% url 'app:delete' pk=object.id %}"><img src="{% static 'delete.jpeg' %}" height=80 /></a>
+<a href="edit/{{object.id}}"><img src="{% static 'download.jpg' %}" height=80 class='border'/></a>
+<a href="{% url 'app:delete' pk=object.id %}"><img src="{% static 'delete.jpeg' %}" height=80 class='border'/></a>
 
 {% endblock %}

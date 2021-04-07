@@ -22,7 +22,7 @@ class CreateNote(LoginRequiredMixin,CreateView):
     success_url=reverse_lazy('app:notes')
     def get_form(self, form_class=None):
         form = super(CreateNote, self).get_form(form_class)
-        form.fields['text'].widget = f.Textarea(attrs={"placeholder" : "Enter your text here..","rows" : 8,"cols":50},);
+        form.fields['text'].widget = f.Textarea(attrs={"placeholder" : "Enter your text here..","rows" : 8,"cols":50    },);
         form.fields['text'].label='';
         form.fields['title'].widget= f.TextInput(attrs={"placeholder" : "Enter Title Here.."})
         return form

@@ -7,6 +7,6 @@
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" class="btn" id="login-submit" value="Login">
-    <h4>New to NOTSERA?? <a href="{% url 'signup'%}" class="signup blink_me"> SIGN UP NOW</a></h4>
+    <b><h4>New to NOTSERA?? <a href="{% url 'signup'%}" class="signup blink_me"> SIGN UP NOW</a></h4></b>
   </form>
 {% endblock %}
